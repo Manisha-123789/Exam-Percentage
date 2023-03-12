@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #799cd3;
+        }
+
+        div {
+            width: 50vh;
+            height: 50vh;
+            background: white;
+            margin-top: 25vh;
+            margin-bottom: 50vh;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2.5%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+        }
+
+        h3 {
+            text-transform: capitalize;
+            color: #799cd3;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            text-align: center;
+            align-self: auto;
+        }
+
+        label {
+            font-size: large;
+            color: grey;
+
+        }
+
+
+        input {
+            border-style: none;
+            outline: none;
+            background: #799cd3;
+            width: 80%;
+            height: 8%;
+            font-size: large;
+            color: white;
+            padding: 2.5%;
+        }
+
+        p {
+            font-size: x-large;
+            color: grey;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3> "Find The Persentage Of Marks" </h3>
+        <br><br>
+
+        <label>
+            Enter the Obtain Marks :
+        </label> <br><br>
+        <input id="textM" type="text" onchange="myFuction()"></input>
+        <br><br>
+        <label>
+            Enter the Total Marks :
+        </label> <br><br>
+        <input id="textF" type="text" onchange="myFuction()"></input>
+        <br><br>
+        <p id="Demo">
+        </p>
+    </div>
+</body>
+<script>
+    function myFuction() {
+        x = document.getElementById("textM").value;
+        y = document.getElementById("textF").value;
+        n = x / y * 100;
+        n = n.toFixed(2);
+        document.getElementById("Demo").innerHTML = "Persentage is \:" + " " + n;
+
+    }
+
+
+
+</script>
+
+</html>
